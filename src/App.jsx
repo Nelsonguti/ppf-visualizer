@@ -47,7 +47,7 @@ function SceneCanvas({ ppfHex }) {
       <directionalLight position={[-10, 5, -5]} intensity={0.5} />
       <pointLight position={[0, 5, 0]} intensity={1} />
       <CarModel ppfHex={ppfHex} />
-      <OrbitControls enableDamping dampingFactor={0.05} minDistance={4} maxDistance={10} maxPolarAngle={1.4} />
+      <OrbitControls enableDamping dampingFactor={0.05} minDistance={7} maxDistance={11} maxPolarAngle={1.4} />
       <Environment preset="city" />
     </Canvas>
   )
