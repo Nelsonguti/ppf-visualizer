@@ -41,13 +41,13 @@ function CarModel({ ppfHex }) {
 
 function SceneCanvas({ ppfHex }) {
   return (
-    <Canvas camera={{ position: [5, 3, 8], fov: 50 }}>
+    <Canvas camera={{ position: [0, 2, 8], fov: 45 }}>
       <ambientLight intensity={0.8} />
       <directionalLight position={[10, 10, 5]} intensity={2} />
       <directionalLight position={[-10, 5, -5]} intensity={0.5} />
       <pointLight position={[0, 5, 0]} intensity={1} />
       <CarModel ppfHex={ppfHex} />
-      <OrbitControls enableDamping dampingFactor={0.05} />
+      <OrbitControls enableDamping dampingFactor={0.05} minDistance={3} maxDistance={12} target={[0, 0.5, 0]} />
       <Environment preset="city" />
     </Canvas>
   )
